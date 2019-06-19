@@ -1,0 +1,108 @@
+===>Esta aplicacion es creada como proyecto de cinta roja para el Batch 30 de Devf.
+
+===>Integrantes del equipo:
+Calva Avalos Carlos Ivan
+
+===>La aplicacion, implementa tecnologias del Stack MERN (MongoDB, Express, React, Node)
+
+===>Direccion del repositorio:
+https://github.com/Binderbul/AudioAuditore.git
+
+===>Software usado para la creacion del proyecto:
+-Visual Studio Code
+-Git, GitBash para windows
+-Node.js (version estable 10.16.0 LTS)
+-MongoDB //https://www.mongodb.com/download-center/community CS, 4.0.10, contenido MongoCompass
+    En windows, hay que agregar al PATH mongod, para ejecutarlo en consola
+    ruta: C:\Program Files\MongoDB\Server\4.0\bin
+    En configuracion avanzada del sistema, ir a variables de entorno, editamos, nuevo y pegamos direccion
+    Posteriormente es necesario crear una carpeta en la raiz de disco duro, llamada "data", y dentro de ella "db
+    en cmd, "mongod" inicia el servidor, "mongo" inicia el shell
+-gitKraken
+-postman
+
+==>Archivos y Carpetas:
+
+->AudioAuditore\src\index.js,
+archivo del servidor de express
+
+->AudioAuditore\src\routes\task.routes.js,
+define las operaciones con las url del servidor
+
+->AudioAuditore\src\models\task.js,
+define los modelos de la base de datos
+
+->AudioAuditore\src\database.js,
+permite y configura la conexion a la base de datos
+
+->AudioAuditore\src\public,
+carpeta donde estaran los recursos para el frontEnd
+
+->AudioAuditore\src\app,
+carpeta del codigo de React
+
+->AudioAuditore\src\app\index.js
+arranca la interfaz de react
+
+->AudioAuditore\webpack.config.js
+archivo de configuracion para webpack, necesario cuando se ejecuta webpack
+
+->AudioAuditore\.babelrc
+archivo de configuracion de babel
+
+===>Paquetes de mongo instalados
+Creados en la raiz del proyecto (/AudioAuditore):
+
+1) npm init
+Creacion del proyecto de node
+
+2) npm install express (no se pasa en git, instalar individualmente)
+Modulo de express, infraestructura de aplicaciones web para Node.js
+
+3) npm install nodemon -D (como dependencia de desarrollo)
+Modulo nodemon, reinicia el servidor automaticamente cuando hay cambios
+Se instala con "-D", para indicar que es una dependencia de desarrollo y no de la aplicacion
+
+4) npm install morgan
+Modulo de morgan, usado como middleware, permite ver las peticiones HTTP
+
+5) npm install mongoose
+Modulo mongoose, permite conectarnos a la base de datos y definir los datos de la base de datos
+
+
+-npm install cors
+
+6) npm install webpack -D
+Modulo webpack, traduce el codigo js de react para poner en html*?
+
+7) npm install webpack-cli -D
+Modulo webpack-cli, necesario para webpack
+
+8) npm install react react-dom
+Modulos react y react-dom, este ultimo es para los navegadores*?
+AVISO: SOLO INSTALADO COMO DEPENDENCIA DE DESARROLLO (npm install react react-dom -D)
+
+9) npm install --save-dev @babel/core 
+Modulo para instalar el core
+
+10) npm install babel-core babel-loader@7 babel-preset-react babel-preset-env -D
+Modulos babel-core y babel-loader, y sus presents babel-preset-react babel-preset-env
+babel-core: compilador de babel, traduce el js
+*babel-loader@7: permite a webpack, tomar a babel
+babel-preset-react: traduce a react
+babel-preset-env: traduce el codigo moderno de js
+
+PARA QUITAR UN PAQUETE completamente https://stackoverflow.com/questions/13066532/how-to-uninstall-npm-modules-in-node-js/13066677
+
+===>scripts añadidos a package.json de mongo
+
+1)"start": "node src/index.js"
+permite iniciar el servidor, con "npm start"
+no requiere la palabra run, pues start es estandar
+
+2)"dev": "nodemon src/index.js"
+permite iniciar el servidor con nodemon, con "npm run dev"
+
+3) "webpack": "webpack --mode development --watch"
+corre webpack en modo desarrollo y se queda vigilando
+

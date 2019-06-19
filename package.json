@@ -1,0 +1,29 @@
+{
+  "name": "audioauditore",
+  "version": "1.0.0",
+  "description": "Proyecto de cinta roja de Devf, batch 30",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Binderbul/AudioAuditore.git"
+  },
+  "author": "CarlosBinderbul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Binderbul/AudioAuditore/issues"
+  },
+  "homepage": "https://github.com/Binderbul/AudioAuditore#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.15",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
