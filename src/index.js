@@ -19,6 +19,7 @@ app.use(express.json());//comprueba que el dato recibido sea un json y lo parsea
 // Routes, urls del servidor
 app.use('/api/tasks', require('./routes/task.routes.js'));//usamos el archivo de rutas en el servidor, '/api/tasks' es un prefijo de ruta *?
 app.use('/api/tiendas', require('./routes/tienda.routes.js'));
+app.use('/api/comentarios', require('./routes/comentarios.routes.js'));
 
 // Static files, carpeta public
 //console.log(__dirname);//vemos la constante __dirname, que es la ruta de la direccion de index.js
