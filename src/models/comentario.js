@@ -6,7 +6,7 @@ const ComentarioSchema = new Schema({//definimos el esquema de los datos
     estrellas: { type: Number},//definimos propiedades
     idObjetoRelacionado: { type: String},
     nombreUsuarioRelacionado: { type: String},//definimos propiedades
-    idUsuarioRelacionado: {type: mongoose.Schema.Types.ObjectId, ref: 'Usuario'}
+    idUsuarioRelacionado: {type: String}
 },{ timestamps: true});
 
 module.exports = mongoose.model('Comentario', ComentarioSchema);//definimos el modelo de task y le damos el esquema definido, ademas lo exportamos
